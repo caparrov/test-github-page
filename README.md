@@ -8,6 +8,7 @@ Given a numerical kernel (written in C/C++), ERM generates its dynamic computati
 * [DAG-Based Performance model](resources/performance-model.md)
 * [Execution flow in ERM](https://github.com/caparrov/ERM-4.0.1/blob/master/resources/execution-flow.md)
 * [Defining microarchitectural configurations] (https://github.com/caparrov/ERM-4.0.1/blob/master/resources/uarch-configurations.md) 
+* [Adding performance bounds into the roofline plot](resources/performance-bounds.md)
 * [Limitations](https://github.com/caparrov/ERM-4.0.1/resources/limitations.md)
 * [Comparison to measured performance](https://github.com/caparrov/ERM/resources/comparison.md)
 * [Examples]
@@ -126,7 +127,8 @@ This script does the following:
 
 ## References
 
-[1] V. Caparrós Cabezas. "A DAG-Based Approach to ModelingBottlenecks on Modern Microarchitectures". Diss. ETH No. 24256 (2017)
+[1] V. Caparrós Cabezas. "A DAG-Based Approach to Modeling
+Bottlenecks on Modern Microarchitectures". Diss. ETH No. 24256 (2017)
 
 [2] S. Williams, A. Waterman and D. Patterson. "Roofline: an insightful visual performance model for multicore architectures
 ". Communications of the ACM, 2009.
