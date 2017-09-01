@@ -1,3 +1,9 @@
+<style>
+body {
+text-align: justify}
+</style>
+
+
 # DAG-based Performance Model
 
 
