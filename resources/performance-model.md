@@ -4,10 +4,10 @@ text-align: justify}
 </style>
 
 
-# DAG-based Performance Model
+#DAG-based Performance Model
 
 
-## Background
+### Background
 
 Approaches to analyzing the performance of applications range from high-level analytical modelsthat provide coarse estimates of the performance of a small set of numerical kernels runningon a simple model of a processing platform, to sophisticated tools that provide accurateperformance estimations or measurements of actual execution on a givenplatform.
 
@@ -19,7 +19,7 @@ Similar to these approaches, wewant a model that captures the interaction of ap
 The following figure illustrates our proposed approach to bridging the gap between high-level analyticalmodels and detailed microarchitectural simulation. 
 
 
-<a href="url"><img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/perf-model-overview.png" align="left" width="90%" height="90%"></a>
+<a href="url"><img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/perf-model-overview.png" align="left" width="94%" height="94%"></a>
 
 
 
