@@ -2,18 +2,18 @@
 
 
 ## Background
-Approaches to analyzing the performance of applications range from high-level analytical modelsthat provide coarse estimates of the performance of a small set of numerical kernels runningon a simple model of a processing platform, to sophisticated tools that provide accurateperformance estimations or measurements of actual execution on a givenplatform.
 
+Approaches to analyzing the performance of applications range from high-level analytical modelsthat provide coarse estimates of the performance of a small set of numerical kernels runningon a simple model of a processing platform, to sophisticated tools that provide accurateperformance estimations or measurements of actual execution on a givenplatform.
 
 Similar to these approaches, wewant a model that captures the interaction of applications’ properties and key resources of modernmicroarchitectures, and provides reasonable estimates of performance on modern processors. Incontrast to existing approaches, we target at inherent properties from the computation DAG, e.g.,W, Q, and detailed performance data over the course of the execution.
 
 
-Fig. 1.3 illustrates our proposed approach to bridging the gap between high-level analyticalmodels and detailed microarchitectural simulation. 
+
+The following figure illustrates our proposed approach to bridging the gap between high-level analyticalmodels and detailed microarchitectural simulation. 
 
 
+<a href="url"><img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/perf-model-overview.png" align="left"></a>
 
-
-![alt text](https://raw.githubusercontent.com/caparrov/ERM-4.0.1/master/resources/perf-model-overview.png "")
 
 
 As shown in the figure, our work builds onprior high-level DAG-based analytical models and thus is a DAG-based *model approach*. Ourmodel, however, considers a much more comprehensive set of platform parameters to model theprocessor, such as out-of-order (OoO) execution buffers, latency and bandwidths of a multi-levelmemory hierarchy, or instruction fetch bandwidth. Thus, it achieves more accurate performanceestimates and yields deeper insights into the interaction of the DAG with the modeled hardwareresources, without the need to use a full-fledged simulator or access to a given platform.Due to the increased complexity of our microarchitectural model, the performance is not estimatedby formulas as in classical methods, but by a tool that both dynamically generates andschedules the DAG on the modeled microarchitecture. This tool, similarly to microarchitecturalsimulators, models the execution of an application on a cycle-by-cycle basis; in contrast tomicroarchitectural simulators, it only models inherent properties of the application, and highlevelfeatures of a microarchitecture. For example, it considers floating-point computations andmemory accesses, but does not model machine-specific address calculation operations, or callingconventions. As another example, it considers a multi-level cache hierarchy, but does not modelthe details of cache associativity or the virtual memory system.
