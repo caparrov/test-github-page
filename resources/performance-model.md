@@ -12,6 +12,7 @@ text-align: justify}
 Approaches to analyzing the performance of applications range from high-level analytical modelsthat provide coarse estimates of the performance of a small set of numerical kernels runningon a simple model of a processing platform, to sophisticated tools that provide accurateperformance estimations or measurements of actual execution on a givenplatform.
 
 Similar to these approaches, wewant a model that captures the interaction of applications’ properties and key resources of modernmicroarchitectures, and provides reasonable estimates of performance on modern processors. Incontrast to existing approaches, we target at inherent properties from the computation DAG, e.g.,W, Q, and detailed performance data over the course of the execution.
+{: style="text-align: justify"}
 
 
 
