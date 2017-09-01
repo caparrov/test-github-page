@@ -1,4 +1,4 @@
-#DAG-based Performance Model
+# DAG-based Performance Model
 
 
 ### Background
@@ -13,7 +13,7 @@ Similar to these approaches, wewant a model that captures the interaction of ap
 The following figure illustrates our proposed approach to bridging the gap between high-level analyticalmodels and detailed microarchitectural simulation. 
 
 
-<a href="url"><img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/perf-model-overview.png" align="left" width="98%" height="98%"></a>
+<a href="url"><img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/perf-model-overview.png" align="left" width="99%" height="99%"></a>
 
 
 
