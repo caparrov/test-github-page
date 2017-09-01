@@ -5,6 +5,13 @@ ERM is a tool for analyzing (modeled) bottlenecks of numerical kernels running o
 ERM is based on the the DAG-based performance model from [1]. Given a numerical kernel (written in C/C++), ERM generates its dynamic computation DAG (for the given input) and simulates its execution on a high-level model of a microarchicture. From the scheduled DAG, it extracts detailed per-cycle data about the execution, that is used to generate an extended roofline plot, an extension of the original roofline plot [2], with additional . The result is ageneralization of the roofline plot that integrates additional hardware-related bottlenecks as performance bounds into a singleviewgraph.
 
 
+
+asdoksdofj
+
+asdifndfagnv ba[dfog
+
+afgnoaidnfgoaidfng
+
 znsjkdnfpidfuvn
 
 
