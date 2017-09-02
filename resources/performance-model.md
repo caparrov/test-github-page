@@ -85,17 +85,10 @@ are available. ERM uses stack reuse distance analysis [5] to model fully associa
 The result is a scheduled DAG as shown in Figure 3. 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/livermore-kernel-23.png" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/livermore-kernel-23.png"   width="40%" height="40%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/scheduled-DAG.png"   width="40%" height="40%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 <p style="width:image width px; font-size:90%; text-align:center;">
-Figure 2: High-level model of the processor core used by ERM.
-</p>
-</p>
-
-<p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/livermore-kernel-23.png"   width="40%" height="40%" alt="Sublime's custom image"/>
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/scheduled-DAG.png"   width="40%" height="40%" alt="Sublime's custom image"/>
-<p style="width:image width px; font-size:90%; text-align:center;">
-Figure 2: Overview of performance analysis techniques.
+Figure 3: 2-D implicit hydrodynamics fragment (Livermore kernel 23) and associated scheduled DAG (small extract).
 </p>
 </p>
 
@@ -109,26 +102,31 @@ Figure 2: Overview of performance analysis techniques.
 
 
 
-The scheduled DAG contains five different types of nodes and the nodes’ execution cycle is determined by both data dependences
+The scheduled DAG contains different types of nodes and the nodes’ execution cycle is determined by both data dependences
 and the input microarchitectural constraints. For example, the execution of node (4) is delayed
 due to memory bandwidth availability (only two nodes of that type can be executed per cycle
-assuming L1-ld = 2 loads/cycle), and the length of node (3) is five cycles due to the latency of
-the corresponding functional unit (mul = 5 cycles). We define the following properties of the 
-scheduled DAG, which are used by ERM to model performance bounds.
-
-### Issue time of a node type x
-x ) is the number of cycles in which nodes of type x
-are being issued. It can be estimated as:
+assuming L1 load bandwidth of 2 loads/cycle), and the length of node (3) is five cycles due to the latency of
+the corresponding functional unit. We define the following properties of the 
+scheduled DAG, which are used by ERM to [model performance bounds](resources/performance-bounds.md).
 
 
-### Latency time of a node type x
+##### Node types
+We distinguish the following nodes in the scheduled DAG: Arithmetic computations
+(additions, multiplications, divisions, and their corresponding vector types), vector
+computations (shuffle and blend), load and store memory nodes (L1, L2, L3, and mem),
+and stalls due to the five OoO buffers. 
 
 
 
-### Latency time of a node type x
+##### Issue time of a node type x
+Number of cycles in which nodes of type x are being issued.
 
 
-### Performance.
+##### Latency time of a node type x
+
+
+
+##### Performance.
 The performance of the scheduled DAG, P, is given as the ratio of arithmetic
 computations per unit of execution time:
 
