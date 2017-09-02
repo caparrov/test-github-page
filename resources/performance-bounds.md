@@ -37,10 +37,9 @@ performance bound associated with a node type x as the maximum achievable perfor
 execution consisted only of issue cycles
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dag-issue-bound.png"   width="40%" height="40%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/roofline-plot-issue-bound.png"   width="40%" height="40%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dag-issue-bound.png"   width="50%" height="50%" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/roofline-plot-issue-bound.png"   width="65%" height="65%" alt="Sublime's custom image"/>
 <p style="width:image width px; font-size:90%; text-align:center;">
-Figure 3: 2-D implicit hydrodynamics fragment (Livermore kernel 23) and associated scheduled DAG (small extract).
 </p>
 </p>
 
