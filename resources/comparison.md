@@ -22,7 +22,7 @@ measured performance is reported as a fold change, that is, 1 + | log2(estimated
 <img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/wht-i-warm-illustrator.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 
 <img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/wht-r-warm-illustrator.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/mvm-war-m-illustrator.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/mvm-warm-illustrator.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 
 <img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/mmm-warm-illustrator.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 <img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/mmm-block-warm-thesis.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
