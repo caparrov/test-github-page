@@ -73,24 +73,24 @@ measured performance is reported as a fold change.
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dsyrk-15-171-13-normalized.pdf.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dsyrk-15-171-13-normalized.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 
 
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dsyrk-16-160-16-normalized.pdf.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dsyrk-16-160-16-normalized.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 
 
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dltrsv-15-171-13-normalized.pdf.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dltrsv-15-171-13-normalized.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 
 
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dltrsv-16-160-16-normalized.pdf.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dltrsv-16-160-16-normalized.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dlusmm-16-100-7-normalized.pdf.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dlusmm-16-100-7-normalized.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dlusmm-16-96-8-normalized.pdf.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dlusmm-16-96-8-normalized.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dsylmm-16-100-7-normalized.pdf.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dsylmm-16-100-7-normalized.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dsylmm-16-96-8-normalized.pdf.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dsylmm-16-96-8-normalized.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 </p>
 
 ## Differences with measured performance
