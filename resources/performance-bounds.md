@@ -56,6 +56,33 @@ execution consisted only of issue cycles
 
 
 
+### Stall Performance Bound
+
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dag-stall-bound.png"   width="36%" height="36%" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/roofline-plot-stall-bound.png" width="62%" height="62%" alt="Sublime's custom image"/>
+<p style="width:image width px; font-size:90%; text-align:center;">
+</p>
+</p>
+
+
+
+
+### Overlap Performance Bound
+
+
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dag-overlap-bound.png"   width="36%" height="36%" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/roofline-plot-overlap-bound.png" width="62%" height="62%" alt="Sublime's custom image"/>
+<p style="width:image width px; font-size:90%; text-align:center;">
+</p>
+</p>
+
+
+
+
 ## References
 
 [1] S. Williams, A. Waterman and D. Patterson. "Roofline: an insightful visual performance model for multicore architectures". Communications of the ACM, 2009.
