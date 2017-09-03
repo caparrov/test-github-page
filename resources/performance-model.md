@@ -4,7 +4,7 @@ text-align: justify}
 </style>
 
 
-# DAG-based Performance Model
+# DAG-Based Performance Model
 
 
 ## Background

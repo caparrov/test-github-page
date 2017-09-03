@@ -6,13 +6,20 @@ Given a numerical kernel (written in C/C++), ERM generates its dynamic computati
 
 to which the roofline model seems inherently limited.
 ## Resources
-* [DAG-Based Performance model](resources/performance-model.md)
+* [DAG-based performance model](resources/performance-model.md)
+* [Comparison of modeled and measured performance](resources/comparison.md)
+
+* [Generalized roofline plot](resources/performance-bounds.md)
+
+
 * [Execution flow in ERM](https://github.com/caparrov/ERM-4.0.1/blob/master/resources/execution-flow.md)
-* [Defining microarchitectural configurations] (https://github.com/caparrov/ERM-4.0.1/blob/master/resources/uarch-configurations.md) 
-* [Adding performance bounds into the roofline plot](resources/performance-bounds.md)
+* [Defining microarchitectural configurations](https://github.com/caparrov/ERM-4.0.1/blob/master/resources/uarch-configurations.md) 
+
+
+* [Examples](https://github.com/caparrov/ERM-4.0.1/blob/master/resources/uarch-configurations.md) 
+
 * [Limitations](https://github.com/caparrov/ERM-4.0.1/resources/limitations.md)
-* [Comparison to measured performance](https://github.com/caparrov/ERM/resources/comparison.md)
-* [Examples]
+
 
 
 ## Build Instructions
