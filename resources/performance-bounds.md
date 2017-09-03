@@ -37,8 +37,8 @@ performance bound associated with a node type x as the maximum achievable perfor
 execution consisted only of issue cycles
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dag-issue-bound-new.png"   width="36%" height="36%" alt="Sublime's custom image"/>
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/roofline-plot-issue-bound-new.png" width="62%" height="62%" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/dag-issue-bound.png"   width="36%" height="36%" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/roofline-plot-issue-bound.png" width="62%" height="62%" alt="Sublime's custom image"/>
 <p style="width:image width px; font-size:90%; text-align:center;">
 </p>
 </p>
