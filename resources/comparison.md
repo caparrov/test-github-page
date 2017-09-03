@@ -23,6 +23,11 @@ measured performance is reported as a fold change, that is, 1 + | log2(estimated
 </p>
 </p>
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/wht-i-warm-illustrator.png"   width="60%" height="60%" alt="Sublime's custom image"/>
+<p style="width:image width px; font-size:90%; text-align:center;">
+</p>
+</p>
 
 
 ## Vector code
