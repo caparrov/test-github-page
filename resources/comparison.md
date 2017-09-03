@@ -18,16 +18,21 @@ measured performance is reported as a fold change, that is, 1 + | log2(estimated
 ## Scalar code
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/fft-warm-thesis.png"   width="60%" height="60%" alt="Sublime's custom image"/>
-<p style="width:image width px; font-size:90%; text-align:center;">
-</p>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/fft-warm-thesis.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/wht-i-warm-illustrator.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/wht-r-warm-illustrator.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/mvm-war-m-illustrator.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/mmm-warm-illustrator.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/mmm-block-warm-thesis.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+
+
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/kmeans-warm-illustrator.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/stencil-warm-thesis.png"   width="45%" height="45%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+
 </p>
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/wht-i-warm-illustrator.png"   width="60%" height="60%" alt="Sublime's custom image"/>
-<p style="width:image width px; font-size:90%; text-align:center;">
-</p>
-</p>
 
 
 ## Vector code
