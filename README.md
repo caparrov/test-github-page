@@ -11,14 +11,13 @@ to which the roofline model seems inherently limited.
 
 * [Generalized roofline plot](resources/performance-bounds.md)
 
-
 * [Execution flow in ERM](https://github.com/caparrov/ERM-4.0.1/blob/master/resources/execution-flow.md)
 * [Defining microarchitectural configurations](https://github.com/caparrov/ERM-4.0.1/blob/master/resources/uarch-configurations.md) 
 
 
 * [Examples](https://github.com/caparrov/ERM-4.0.1/blob/master/resources/uarch-configurations.md) 
 
-* [Limitations](https://github.com/caparrov/ERM-4.0.1/resources/limitations.md)
+* [Limitations](resources/limitations.md)
 
 
 
