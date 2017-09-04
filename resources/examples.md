@@ -20,8 +20,8 @@ considerable reduced in the warm cache scenario.
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/data-rooflinePlot-mvm-cold-2500-bottleneck-overlap-illustrator.png"   width="36%" height="36%" alt="Sublime's custom image"/>
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/data-rooflinePlot-mvm-warm-2500-bottleneck-overlap-illustrator.png" width="62%" height="62%" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/data-rooflinePlot-mvm-cold-2500-bottleneck-overlap-illustrator.png"   width="80%" height="80%" style="border:0px;margin:10px" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/data-rooflinePlot-mvm-warm-2500-bottleneck-overlap-illustrator.png" width="80%" height="80%" style="border:0px;margin:10px" alt="Sublime's custom image"/>
 <p style="width:image width px; font-size:90%; text-align:center;">
 Figure 1: Generalized roofline plot for MVM of square matrices 2500 × 2500..</p>
 </p>
@@ -31,6 +31,24 @@ Figure 1: Generalized roofline plot for MVM of square matrices 2500 × 2500..</p
 
 
 ## Bottlenecks for different sizes
+
+Bottlenecks may also change with the input size. Figure 2 shows the generalized roofline plots for fast Fourier
+Transforms (FFTs) of sizes 2^10 and 2^20. For the small size, L1 latency and bandwidth is the
+limiting resource and the peak is not reached because of latency effects. For larger sizes, more
+performance bounds appear because the application accesses more levels of the memory hierarchy,
+and new execution stalls due to OoO buffers appear (most stalls are due to ROB). Actually, all
+the possible bottleneck lines appear, which means that all buffers create execution stalls.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/data-rooflinePlot-fft-warm-1024-bottleneck-overlap-illustrator-memmodel.png"  width="80%" height="80%" style="border:0px;margin:10px" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/data-rooflinePlot-fft-warm-1048576-bottleneck-overlap-illustrator-memmodel.png" width="80%" height="80%" style="border:0px;margin:10px" alt="Sublime's custom image"/>
+<p style="width:image width px; font-size:90%; text-align:center;">
+Figure 2: Generalized roofline plot for FFT of sizes (a) 1024 and (b) 1048576, warm cache.</p>
+</p>
+
+
+
+
 
 ## Different implementations of the same application
 
