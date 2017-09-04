@@ -4,7 +4,7 @@ text-align: justify}
 </style>
 
 
-# Genralized roofline plot
+# Generalized roofline plot
 
 
 ## Background: Roofline model
@@ -68,7 +68,7 @@ For the DAG in Figure 3, T_issue of arithmetic nodes is 4 cycles, T_lat is 9 cyc
 flops/cycle. That is, even ignoring stall effects, memory time, and overlap (these effects are
 explained later), the maximum achievable performance is
 0.301 (out of the 2 flops/cycle provided by the platform) due to the issue and latency effects
-of the floating-point computations. We represent this bound as a horizontal roof at P = 0.301
+of the floating-point computations. We represent this bound as a horizontal roof at P = 0.301 labeled as 'latency'.
 flops/cycle.
 
 

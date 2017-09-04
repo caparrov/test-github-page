@@ -6,15 +6,16 @@ text-align: justify}
 
 # Limitations 
 
+### DAG-based performance model
 
-## Generalized roofline plot
 
-* **Application-specific roofs**. As already mentioned, the various roofs that we derive become
+
+### Generalized roofline plot
+
+* **Application-specific roofs**. The new hardware-related bounds become
 specific to program and input and thus such plot can contain only one performance
 point. This arises from the fact that T_issue, T_lat, and T_s, from which the bounds are estimated,
-cannot be obtained by formulas that depend on  and (platform properties), or
-I (the variable in the x-axis that characterizes the application), as Tcomp and Tmem in (4.2)
-and (4.4), respectively. Rather, these runtimes depend on the specific execution of the
+cannot be obtained by formulas. Rather, these runtimes depend on the specific execution of the
 application on the platform, have to be measured from the scheduled DAG, and are only
 reported by tools that perform a detailed per-cycle analysis, like ERM.
 

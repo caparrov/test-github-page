@@ -110,25 +110,46 @@ the corresponding functional unit. We define the following properties of the
 scheduled DAG, which are used by ERM to [model performance bounds](resources/performance-bounds.md).
 
 
-##### Node types
-We distinguish the following nodes in the scheduled DAG: Arithmetic computations
-(additions, multiplications, divisions, and their corresponding vector types), vector
-computations (shuffle and blend), load and store memory nodes (L1, L2, L3, and mem),
-and stalls due to the five OoO buffers. 
+###### Node types
+> We distinguish the following nodes in the scheduled DAG: 
+* Arithmetic computations: additions, multiplications, divisions, and their corresponding vector types.
+* Vector computations: shuffle and blend.
+* Load and store memory nodes: L1, L2, L3, and mem.
+* Stalls due to five OoO buffers: reservation station (RS), reorder buffer (ROB), load buffer (LB), store buffer (sb), and line-fill buffer (LFB). 
+
+
+###### Issue time of a node (T_issue)
+> Number of cycles in which nodes of a certain type are being issued.
+
+
+###### Latency time of a node (T_lat)
+> Number of cycles in which nodes of a certain type are executed
+but not issued, that is, latency-only cycles.
+
+ 
+###### Overlap cycles. 
+
+> Overlap cycles can be defined for every set of node types, although for the generalized roofline plot ERM only considers overlap between pairs of node types (See options). The total execution
+time of such a pair can be expressed as a function of the individual times and the overlap
+cycles for this pair.
 
 
 
-##### Issue time of a node type x
-Number of cycles in which nodes of type x are being issued.
+###### Stall cycles (T_lat)
+> Number of cycles in which nodes of a certain type are executed
+but not issued, that is, latency-only cycles.
 
 
-##### Latency time of a node type x
 
 
+###### Execution time or runtime (T). 
+> The runtime of the scheduled DAG is the total number
+of cycles (length) of the scheduled DAG.
 
-##### Performance.
-The performance of the scheduled DAG, P, is given as the ratio of arithmetic
-computations per unit of execution time:
+
+###### Performance.
+> The performance of the scheduled DAG, P, is given as the ratio of arithmetic
+computations per unit of execution time.
 
 ## References
 
