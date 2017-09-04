@@ -52,6 +52,36 @@ Figure 2: Generalized roofline plot for FFT of sizes (a) 1024 and (b) 1048576, w
 
 ## Different implementations of the same application
 
-## Stencil and k-means
+We compare how bottlenecks change across different implementations of matrix-matrix multiplication
+(MMM) of square matrices of size 500. Fig. 4.17 shows the generalized roofline plots for (a)
+a triple loop implementation and (b) a six-fold loop version, which is known to have better locality
+and, hence, better performance as shown in the figure. In both implementations, execution stall
+cycles due to the ROB occupancy and latency cycles of floating-point computations are important
+contributors to the execution time, and the associated bottleneck lines hit the performance point.
+While in the blocked implementation only the L1 latency appears as a bottleneck, in the triple
+loop implementation, the L2 latency limits performance as much as the L1 latency. In none of the
+cases the memory-related (mem) bottlenecks show up because the three matrices fit within the
+last-level cache. Note that although blocking is an optimization that targets improving locality,
+it also reduces the floating point latency bottleneck.
+The generalized roofline plots in Fig. 4.17 show that the notion of compute- and memorybound
+change when more resources than just throughput and memory bandwidth are taken into
+account. MMM is known to be compute-bound [23], and in fact it is with respect to the throughput
+and memory bandwidth roofs. However, the generalized roofline plots show that latency cycles
+associated with memory accesses contribute largely to the execution time of the kernel, as much
+as the cycles spent on computation.
+
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/data-rooflinePlot-mmm-block-warm-500-bottleneck-overlap-illustrator.png"  width="80%" height="80%" style="border:0px;margin:10px" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/data-rooflinePlot-mmm-warm-500-bottleneck-overlap-illustrator.png" width="80%" height="80%" style="border:0px;margin:10px" alt="Sublime's custom image"/>
+<p style="width:image width px; font-size:90%; text-align:center;">
+Figure 2: Generalized roofline plot for FFT of sizes (a) 1024 and (b) 1048576, warm cache.</p>
+</p>
+
+
+
+
+
+
 
 ## SIMD applications
