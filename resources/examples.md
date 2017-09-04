@@ -81,7 +81,27 @@ Figure 2: Generalized roofline plot for FFT of sizes (a) 1024 and (b) 1048576, w
 
 
 
-
-
-
 ## SIMD applications
+
+
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/syrk-15-4-emit-llvm-c-g-O3-fno-vectorize-fno-slp-vectorize-warm-git-243-15-4-config-1.png
+  width="80%" height="80%" style="border:0px;margin:10px" alt="Sublime's custom image"/>
+
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/syrk-16-4-emit-llvm-c-g-O3-fno-vectorize-fno-slp-vectorize-warm-git-243-16-4-config-1.png" width="80%" height="80%" style="border:0px;margin:10px" alt="Sublime's custom image"/>
+
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/ltrsv-16-emit-llvm-c-g-O3-fno-vectorize-fno-slp-vectorize-warm-git-243-16-config-1.png"  width="80%" height="80%" style="border:0px;margin:10px" alt="Sublime's custom image"/>
+
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/ltrsv-112-emit-llvm-c-g-O3-fno-vectorize-fno-slp-vectorize-warm-git-243-112-config-1.png" width="80%" height="80%" style="border:0px;margin:10px" alt="Sublime's custom image"/>
+
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/sylmm-72-emit-llvm-c-g-O3-fno-vectorize-fno-slp-vectorize-warm-git-243-72-config-1.png"  width="80%" height="80%" style="border:0px;margin:10px" alt="Sublime's custom image"/>
+
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/lusmm-86-emit-llvm-c-g-O3-fno-vectorize-fno-slp-vectorize-warm-git-243-86-config-1.png" width="80%" height="80%" style="border:0px;margin:10px" alt="Sublime's custom image"/>
+
+<p style="width:image width px; font-size:90%; text-align:center;">
+Figure 2: Generalized roofline plot for FFT of sizes (a) 1024 and (b) 1048576, warm cache.</p>
+</p>
+
+
+
