@@ -88,7 +88,7 @@ the corresponding functional unit.
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/code.png"   width="40%" height="40%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/code.png"   width="50%" height="50%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 <img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/scheduled-DAG-pink.png"   width="42%" height="42%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 <p style="width:image width px; font-size:90%; text-align:center;">
 Figure 3: 2-D implicit hydrodynamics fragment (Livermore kernel 23) and associated scheduled DAG (small extract).
@@ -138,8 +138,12 @@ respective OoO buffers.
 
 
 ###### Performance
-> The performance of the scheduled DAG is given as the ratio of arithmetic
-computations per unit of execution time (T).
+> The performance of the scheduled DAG is given as the ratio of work per unit of execution time (T).
+
+The focus of ERM is on floating-point
+numerical kernels. Thus, work is always measured in number of single-precision or
+double-precision floating-point operations (flops), execution time is measured in cycles and
+performance is always reported in flops/cycle.
 
 ## References
 
