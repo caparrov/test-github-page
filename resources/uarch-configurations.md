@@ -56,7 +56,7 @@ Figure 2: High-level model of the processor core used by ERM.
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/arm-frontend-illustrated.png"   width="65%" height="65%" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/arm-frontend-illustrated.png"   width="95%" height="95%" alt="Sublime's custom image"/>
 <p style="width:image width px; font-size:90%; text-align:center;">
 Figure 2: High-level model of the processor core used by ERM.
 </p>
