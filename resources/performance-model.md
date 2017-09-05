@@ -81,15 +81,15 @@ are available. ERM uses stack reuse distance analysis [5] to model fully associa
 
 
 The result is a scheduled DAG as shown in Figure 3. The scheduled DAG contains different types of nodes and the nodes’ execution cycle is determined by both data dependences
-and the input microarchitectural constraints. For example, the execution of node (4) is delayed
+and the input microarchitectural constraints. For example, the execution of the third L1 load (L1 ld) is delayed
 due to memory bandwidth availability (only two nodes of that type can be executed per cycle
-assuming L1 load bandwidth of 2 loads/cycle), and the length of node (3) is five cycles due to the latency of
+assuming L1 load bandwidth of 2 loads/cycle), and the length of multiplications (M) is five cycles due to the latency of
 the corresponding functional unit. 
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/livermore-kernel-23.png"   width="40%" height="40%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/scheduled-DAG-pink.png"   width="40%" height="40%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/code.png"   width="40%" height="40%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/scheduled-DAG-pink.png"   width="42%" height="42%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 <p style="width:image width px; font-size:90%; text-align:center;">
 Figure 3: 2-D implicit hydrodynamics fragment (Livermore kernel 23) and associated scheduled DAG (small extract).
 </p>
@@ -108,42 +108,38 @@ scheduled DAG, which are used by ERM to [model performance bounds](resources/per
 > We distinguish the following nodes in the scheduled DAG: 
 * Arithmetic computations: additions, multiplications, divisions, and their corresponding vector types.
 * Vector computations: shuffle and blend.
-* Load and store memory nodes: L1, L2, L3, and mem.
-* Stalls due to five OoO buffers: reservation station (RS), reorder buffer (ROB), load buffer (LB), store buffer (sb), and line-fill buffer (LFB). 
+* Memory loads and stores: L1, L2, L3, and mem.
+* Stalls due to five out-of-order execution buffers: reservation station (RS), reorder buffer (ROB), load buffer (LB), store buffer (sb), and line-fill buffer (LFB). 
 
 
-###### Issue time of a node (T_issue)
+###### Issue time of a node type (T_issue)
 > Number of cycles in which nodes of a certain type are being issued.
 
 
-###### Latency time of a node (T_lat)
+###### Latency time of a node type (T_lat)
 > Number of cycles in which nodes of a certain type are executed
 but not issued, that is, latency-only cycles.
 
  
-###### Overlap cycles. 
+###### Overlap cycles
 
-> Overlap cycles can be defined for every set of node types, although for the generalized roofline plot ERM only considers overlap between pairs of node types (See options). The total execution
-time of such a pair can be expressed as a function of the individual times and the overlap
-cycles for this pair.
+> Overlap cycles can be defined for every set of node types, although for the generalized roofline plot ERM only considers overlap between pairs of node types (ERM can be configured to report overlap between all combinations of sets of nodes).
 
 
-
-###### Stall cycles (T_lat)
-> Number of cycles in which nodes of a certain type are executed
-but not issued, that is, latency-only cycles.
+###### Stall cycles (T_stall)
+> Number of execution cycles in which at least one of the
+OoO execution buffers is full. The stall time T_stall can be further broken down into stalls due to the
+respective OoO buffers.
 
 
 
-
-###### Execution time or runtime (T). 
-> The runtime of the scheduled DAG is the total number
-of cycles (length) of the scheduled DAG.
+###### Execution time or runtime (T)
+> Number of cycles (length) of the scheduled DAG.
 
 
-###### Performance.
-> The performance of the scheduled DAG, P, is given as the ratio of arithmetic
-computations per unit of execution time.
+###### Performance
+> The performance of the scheduled DAG is given as the ratio of arithmetic
+computations per unit of execution time (T).
 
 ## References
 
