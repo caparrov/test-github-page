@@ -43,12 +43,11 @@ choose a set of X parameters to model the microarchitecture.
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/uarch-model-pink.png"   width="65%" height="65%" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/Sandy-Bridge-frontend.png"   width="95%" height="95%" alt="Sublime's custom image"/>
 <p style="width:image width px; font-size:90%; text-align:center;">
 Figure 2: High-level model of the processor core used by ERM.
 </p>
 </p>
-
 
 
 ## ARM
