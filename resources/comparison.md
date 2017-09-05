@@ -11,9 +11,7 @@ text-align: justify}
  -->
 
 The [performance reported by ERM](#performance) is an estimate of
-the actual performance when run on a platform with the given microarchitectural parameters.
-
-The figures below show the comparison of the performance estimated by ERM when it models a [Sandy Bridge microarchitecture](uarch-configurations.md) with the actual measured performance when the code is executed on an Intel Xeon E5-2680 (measured data is obtained with hardware performance counters [1]). We show examples for both scalar and vector numerical kernels.
+the actual performance when run on a platform with the given microarchitectural parameters. The figures below show the comparison of the performance estimated by ERM when it models a [Sandy Bridge microarchitecture](uarch-configurations.md) with the actual measured performance when the code is executed on an Intel Xeon E5-2680 (measured data is obtained with hardware performance counters [1]). We show examples for both scalar and vector numerical kernels.
 
 As shown in
 the figures, ERM accurately estimates performance and performance trends for some applications. In the case of FFT, for example,
