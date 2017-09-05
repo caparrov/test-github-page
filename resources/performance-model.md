@@ -45,24 +45,22 @@ choose a set of X parameters to model the microarchitecture.
 
 
 ## Microarchitecture model
-Figure 2 illustrates the high-level microarchitecture model used in ERM. The processor core is modelled by a total of 40 parameters that define common features of modern superscalar microarchitectures such as out-of-order execution buffers (green
-boxes), execution units for different types of arithmetic operations (red boxes), or multi-level memory subsystem (blue boxes).
+Figure 2 illustrates the high-level microarchitecture model used in ERM. The processor core is modelled by a total of 40 parameters that define common features of modern superscalar microarchitectures. The choice of
+parameters is a trade-off between abstraction and accuracy. For example, the model does capture
+latency and throughput information of the execution units (pink boxes) and multi-level memory hierarchy (blue boxes), as
+well as the out-of-order execution buffers (green boxes). It does not model however cache associativity, details
+of branch prediction (assumed to be perfect) or address translation mechanisms.
+
+Click [here](https://github.com/caparrov/test-github-page/blob/master/resources/uarch-configurations.md) for the complete list of parameters and how to configure them in ERM. 
+
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/uarch-model.png"   width="60%" height="60%" alt="Sublime's custom image"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/uarch-model-pink.png"   width="65%" height="65%" alt="Sublime's custom image"/>
 <p style="width:image width px; font-size:90%; text-align:center;">
 Figure 2: High-level model of the processor core used by ERM.
 </p>
 </p>
 
-
-The choice of
-parameters is a trade-off between abstraction and accuracy. For example, the model does capture
-latency and throughput information of the execution units and multi-level memory hierarchy, as
-well as the out-of-order execution buffers. It does not model however cache associativity, details
-of branch prediction (assumed to be perfect) or address translation mechanisms.
-
-Click [here](https://github.com/caparrov/test-github-page/blob/master/resources/uarch-configurations.md) for the complete list of parameters and how to configure them in ERM.
 
 
 <!---
@@ -78,15 +76,20 @@ Figure 2: Overview of performance analysis techniques.
 ## DAG scheduling
 
 ERM uses Tomasulo’s greedy algorithm to schedule the dynamically unfolding computation
-onto the resources of the processor core's' model (Figure 2): Instructions are scheduled (issued) in the first cycle in which both operands and resources
+onto the resources of the processor core's model (Figure 2): Instructions are scheduled (issued) in the first cycle in which both operands and resources
 are available. ERM uses stack reuse distance analysis [5] to model fully associative caches with least recently used (LRU) replacement policy.
 
 
-The result is a scheduled DAG as shown in Figure 3. 
+The result is a scheduled DAG as shown in Figure 3. The scheduled DAG contains different types of nodes and the nodes’ execution cycle is determined by both data dependences
+and the input microarchitectural constraints. For example, the execution of node (4) is delayed
+due to memory bandwidth availability (only two nodes of that type can be executed per cycle
+assuming L1 load bandwidth of 2 loads/cycle), and the length of node (3) is five cycles due to the latency of
+the corresponding functional unit. 
+
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/livermore-kernel-23.png"   width="40%" height="40%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
-<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/scheduled-DAG.png"   width="40%" height="40%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/scheduled-DAG-pink.png"   width="40%" height="40%" alt="Sublime's custom image" style="border:0px;margin:10px"/>
 <p style="width:image width px; font-size:90%; text-align:center;">
 Figure 3: 2-D implicit hydrodynamics fragment (Livermore kernel 23) and associated scheduled DAG (small extract).
 </p>
@@ -95,18 +98,9 @@ Figure 3: 2-D implicit hydrodynamics fragment (Livermore kernel 23) and associat
 
 
 ## Properties of the scheduled DAG
-<!---
-![alt text](https://raw.githubusercontent.com/caparrov/ERM-4.0.1/master/resources/images/livermore-kernel-23.png width="48")
-![alt text](https://raw.githubusercontent.com/caparrov/ERM-4.0.1/master/resources/images/scheduled-DAG.png "")
- -->
 
 
-
-The scheduled DAG contains different types of nodes and the nodes’ execution cycle is determined by both data dependences
-and the input microarchitectural constraints. For example, the execution of node (4) is delayed
-due to memory bandwidth availability (only two nodes of that type can be executed per cycle
-assuming L1 load bandwidth of 2 loads/cycle), and the length of node (3) is five cycles due to the latency of
-the corresponding functional unit. We define the following properties of the 
+We define the following properties of the 
 scheduled DAG, which are used by ERM to [model performance bounds](resources/performance-bounds.md).
 
 
