@@ -1,15 +1,30 @@
+<style>
+body {
+text-align: justify}
+</style>
+
+
 # Examples
+
+Experimental setup. We model performance bounds for numerical kernels running on a
+modern Intel Xeon; thus, we configure ERM to model this microarchitecture, according to the
+parameters in Table 4.3. We emphasize that we don’t need access to the actual processor to
+perform our analyses. In the generalized roofline plots shown, the original performance bounds
+are shown as solid lines, our added issue, latency and stall bottlenecks as dashed lines, and overlap
+bottlenecks as gray solid lines. Due to the usually high ( 0.95) measured overlaps, the latter
+loose their curved shape.
+
+
+AND SOME CONCLUSION
 
 
 
 ## Cold and warm cache: MVM
 
-Figure1  analyzes a double-precision floating-point matrix-vector multiplication (MVM) run
+Figure 1 analyzes a double-precision floating-point matrix-vector multiplication (MVM) run
 with both cold and warm cache. In the former, memory latency (and bandwidth, which is included
 in all memory bottleneck lines) is the bottleneck as expected (the matrix has to be loaded and
-is not reused). The peak performance is not reached because dependences prevent the full issue
-bandwidth to be used and introduce non-compute cycles due to RS stalls and arithmetic latency.
-In the warm cache scenario, L1 becomes the limiting resource. The peak performance is not
+is not reused). Further, long-latency operations like the memory accesses introduce non-compute cycles due to RS stalls. In the warm cache scenario, L1 becomes the limiting resource. The peak performance is not
 reached because dependences again prevent the full issue bandwidth to be used and produce ROB
 stalls and latency effects. It is also interesting to observe how bottlenecks change from one scenario to the other, even
 if they are not the ones that limit performance. In the cold cache scenario, e.g., the computation
@@ -82,7 +97,44 @@ Figure 2: Generalized roofline plot for FFT of sizes (a) 1024 and (b) 1048576, w
 
 
 ## SIMD applications
-
+Figs. 4.20(a) and 4.20(b) show the result for a symmetric rank-4 update (syrk) operation for
+small matrices of size 15 × 15 and 16 × 16, respectively. The main difference between the two
+plots is that in the latter, the matrix size is multiple of the vector length, which results in higher
+performance and operational intensity. The bottleneck for the kernel in Fig. 4.20(a) is clearly the
+L1 store bandwidth (ERM reports a large number of register spills for this kernel), while in the
+kernel in Fig. 4.20(b), it is the overlap between L1-ld and vector additions the main bottleneck.
+In this case, all the throughput and bandwidth roofs exhibit high utilizations (issue and latency
+bounds are close to the original throughput bounds) and there are no bottlenecks associated with
+the reorder buffer and the store buffer, in contrast to the plot in Fig. 4.20(a).
+Figs. 4.20(c) and 4.20(d) show the generalized roofline plots for a lower triangular linear system
+solver (ltrsv) of a small size (matrix of size 16, fits within the L1 cache) and a large size (matrix
+of size 112, does no fit in the L1 cache), respectively. For the small size, in contrast to most
+generalized roofline plots analyzed so far, there is no tight bound that hits the performance of
+the application. In general, we observe this behavior for small-size kernels, what confirms that
+once the code has been effectively vectorized, the main challenge optimizing code that fits within
+the L1 cache is to rearrange computations to achieve high overlaps between computation and
+data accesses. In these cases, a more detailed overlap analysis, i.e., an analysis that considers not
+only pairs of runtimes, but any combination of runtimes would yield tighter bounds. Although
+we omit these bounds in the generalized roofline plot for ease of visualization, ERM reports
+overlap percentages for every set of runtimes, including overlaps between runtime components
+such as Tissue or Tlat. Although there is no tight bottleneck in the generalized roofline plot in
+Fig. 4.20(c), the overlap between vector divisions and L1 accesses, and reservation station stalls,
+are the main bottlenecks of this computation. For this kernel, shuffles also contribute largely to
+performance. For the large size in Fig. 4.20(d), latency of L2 accesses and reservation station stalls
+are the main bottlenecks. Finally, note that these kernels also perform blend vector operations;
+however, since the fraction of blends with respect to the number of arithmetic computations W
+is very small, the associated performance bound given by (4.29) is too high and does not appear
+in plot.
+Finally, Figs. 4.20(e) and 4.20(f) show the generalized roofline plots for matrix-matrix multiplications
+with symmetric (symml) and upper/lower triangular matrices (lusmm), respectively.
+In both cases, performance reaches approximately 50% of the peak performance of the platform
+(higher performance than the previous SIMD applications analyzed). In both cases, it is hard to
+pinpoint a single bottleneck because all resources contribute to performance. For the symmetric
+matrix, for example, the overlap of vector additions with L1 load and L2 accesses is the main
+bottleneck; however, ROB stalls and the latency of additions are also important limiters of performance.
+For the generalized roofline plot in Fig. 4.20(f), the overlap of L1 loads with additions
+and multiplications, and L1 load latency, and ROB stalls associated with L1 load accesses, are
+the main bottlenecks.
 
 
 <p align="center">
