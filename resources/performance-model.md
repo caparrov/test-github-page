@@ -30,7 +30,7 @@ by formulas as in classical methods, but by a tool (ERM).
 
 
 <div style="width:image width px; font-size:90%; text-align:center;">
-<a href="url"><img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/perf-model-overview.png" align="left" width="99%" height="99%"></a>
+<a href="url"><img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/perf-model-overview-pink.png" align="left" width="99%" height="99%"></a>
 Figure 1: Overview of performance analysis techniques.
 </div>
 
