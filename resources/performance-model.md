@@ -17,7 +17,7 @@ platform.
 
 
 
-Figure 1 illustrates this spectrum of performance analysis techniques, and the position of 
+Figure 1 illustrates the spectrum of performance analysis techniques, and the position of 
 ERM's underlying performance model. As shown in the figure, the model builds on
 prior high-level DAG-based analytical models (e.g., work-depth model [1]) and thus is a *DAG-based model approach*. The
 model, however, considers a much more detailed abstraction of a processing core that 
@@ -45,7 +45,7 @@ choose a set of X parameters to model the microarchitecture.
 
 
 ## Microarchitecture model
-Figure 2 illustrates the high-level microarchitecture model used in ERM. The processor core is modelled by a total of X parameters that define common features of modern superscalar microarchitectures such as out-of-order execution buffers (green
+Figure 2 illustrates the high-level microarchitecture model used in ERM. The processor core is modelled by a total of 40 parameters that define common features of modern superscalar microarchitectures such as out-of-order execution buffers (green
 boxes), execution units for different types of arithmetic operations (red boxes), or multi-level memory subsystem (blue boxes).
 
 <p align="center">

@@ -1,10 +1,26 @@
+<style>
+body {
+text-align: justify}
+</style>
+
+
 # ERM: Extended Roofline Model
 
-ERM is a tool for analyzing (modeled) bottlenecks of numerical kernels running on modern microarchitectures.
+ERM is a tool for analyzing modeled bottlenecks of numerical kernels running on modern microarchitectures.
 
-Given a numerical kernel (written in C/C++), ERM generates its dynamic computation DAG (for the given input) and simulates its execution on a high-level model of a microarchicture (defined by X parameters). From the scheduled DAG, it extracts detailed per-cycle data about the execution, that is used to generate an extended roofline plot, an extension of the original roofline plot [2], that integrates additional hardware-related bottlenecks as performance bounds associated with resources such as latency, or OoO execution.
 
-to which the roofline model seems inherently limited.
+Given a numerical kernel (written in C/C++), ERM generates its dynamic computation DAG (for the given input) and simulates its execution on a high-level model of a microarchicture (defined by 40 parameters). From the scheduled DAG, it extracts detailed per-cycle data about the execution that is used to model performance bounds associated with
+hardware-related performance relevant events such as latency, or OoO execution. These bounds are then integrated into the roofline plot [2] as additional roofs that provide deeper insights into why peak performance is not reached.
+
+
+<!---
+ From the scheduled DAG, it extracts detailed per-cycle data about the execution, that is used to generate an extended roofline plot, an extension of the original roofline plot [2], that integrates additional hardware-related bottlenecks as performance bounds associated with resources such as latency, or OoO execution.
+ generate an extended roofline plot, an extension of the original roofline plot [2], that integrates additional hardware-related bottlenecks as performance bounds associated with resources such as latency, or OoO execution.
+
+ to which the roofline model seems inherently limited.
+ 
+ -->
+
 ## Resources
 * [DAG-based performance model](resources/performance-model.md)
 * [Comparison of modeled and measured performance](resources/comparison.md)
