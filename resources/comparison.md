@@ -11,7 +11,7 @@ text-align: justify}
  -->
 
 The [performance reported by ERM](#performance) is an estimate of
-the actual performance when run on a platform with the given microarchitectural parameters. The figures below show the comparison of the performance estimated by ERM when it models a [Sandy Bridge microarchitecture](uarch-configurations.md) with the actual measured performance when the code is executed on an Intel Xeon E5-2680 (measured data is obtained with hardware performance counters [1]). We show examples for both scalar and vector numerical kernels.
+the actual performance of a numerical kernel when run on a platform with the given microarchitectural parameters. The figures below show the comparison of the performance estimated by ERM when it models a [Sandy Bridge microarchitecture](uarch-configurations.md) with the actual measured performance when the code is executed on an Intel Xeon E5-2680 (measured data is obtained with hardware performance counters [1]). We show examples for both scalar and vector numerical kernels.
 
 As shown in
 the figures, ERM accurately estimates performance and performance trends for some applications. In the case of FFT, for example,
@@ -21,7 +21,7 @@ For the other
 computations, however, the difference is more significant. In the case of WHT, for example,
 average estimated performance is 2.58x and 4x the measured performance for the iterative and
 recursive implementations, respectively
-([differences with measured performance](#differences-with-measured-performance)). As shown in Figure 2, the accuracy of ERM is competitive with the accuracy of MARSSx86 [2].
+([differences with measured performance](#differences-with-measured-performance)). Further, as shown in Figure 2, the accuracy of ERM is competitive with the accuracy of MARSSx86 [2].
 
 What is important, is that ERM reports the detailed [properties of
 the scheduled DAG](performance-model.md), which are not easily available in state-of-the-art
@@ -128,7 +128,7 @@ prefetch (e.g., the next cache line or a strided access), and where to prefetch 
 or L2 caches). However, since we cannot know precisely which prefetchers are activated
 when running our experiments, we do not consider them as a parameter in the model.
 
-* **Large sizes**: For large sizes, differences in performance tend to be larger due to the complexity of accurately
+* **Large sizes**. For applications with large sizes, differences in performance tend to be larger due to the complexity of accurately
 modeling resources like cache structure, memory bandwidth (is affected by many factors in practice
 like page table loads or write-allocate traffic), and prefetcher.
 
