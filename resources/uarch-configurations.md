@@ -53,9 +53,20 @@ In addition to the parameters listed in Table 1, ERM requires the following para
 <p align="center">
 <img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/sb-port-binding.png"   width="95%" height="95%" alt="Sublime's custom image"/>
 <p style="width:image width px; font-size:90%; text-align:center;">
-Figure 2: High-level model of the processor core used by ERM.
+Figure 1: High-level model of the processor core used by ERM.
 </p>
 </p>
+
+
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/caparrov/test-github-page/master/resources/images/hw-port-binding.png"   width="95%" height="95%" alt="Sublime's custom image"/>
+<p style="width:image width px; font-size:90%; text-align:center;">
+Figure 1: High-level model of the processor core used by ERM.
+</p>
+</p>
+
+
 
 
 * **-constraint-ports-ARM=\<bool\>**.
