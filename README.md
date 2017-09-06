@@ -4,6 +4,7 @@ text-align: justify}
 </style>
 
 
+
 # ERM: Extended Roofline Model
 
 ERM is a tool for analyzing modeled bottlenecks of numerical kernels running on modern microarchitectures.
